@@ -5,9 +5,13 @@
 <script>
 function validateForm() {
   var x = document.forms["myForm"]["fname"].value;
+  var y= document.forms["myForm"]["fpwd"].value;
   if (x == "") {
     alert("Name must be filled out");
     return false;
+  }
+  if (y == "") {
+    alert("password must be filled out");
   }
 }
 </script>
@@ -16,7 +20,8 @@ function validateForm() {
 
 <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
   Name: <input type="text" name="fname">
-  <input type="submit" value="Submit">
+  password: <input type="password" name="fpwd">
+  <input type="submit" value="Login">
 </form>
 
 </body>
